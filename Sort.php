@@ -12,7 +12,7 @@ class Sort
      */
     public static function insertSort(array $array)
     {
-    	# 数组长度
+        # 数组长度
         $length = count($array);
 
         # 循环数组
@@ -21,14 +21,14 @@ class Sort
 
             # 从大到小循环已排序部分
             for ($j = $i - 1; $j > -1; $j--) {
-            	# 如果当前要插入的元素小于当前已排序元素
+                # 如果当前要插入的元素小于当前已排序元素
                 if ($ai < $array[$j]) {
-	            	# 把当前要排序元素向前移动一位，（即交换两个元素位置）
+                    # 把当前要排序元素向前移动一位，（即交换两个元素位置）
                     $tmp           = $array[$j];
                     $array[$j]     = $array[$j + 1];
                     $array[$j + 1] = $tmp;
                 } else {
-                	# 结束对已排序部分循环
+                    # 结束对已排序部分循环
                     break;
                 }
             }
